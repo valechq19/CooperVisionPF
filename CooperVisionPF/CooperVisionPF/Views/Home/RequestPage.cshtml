@@ -1,0 +1,281 @@
+﻿
+@{
+    ViewBag.Title = "RequestPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content">
+
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Topbar Info -->
+        <div class="mr-auto ml-md-3">
+            <h1 class="h6">You are creating an access request</h1>
+        </div>
+
+        <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                     aria-labelledby="searchDropdown">
+                    <form class="form-inline mr-auto w-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small"
+                                   placeholder="Search for..." aria-label="Search"
+                                   aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bell fa-fw" style="font-size: 20px"></i>
+                    <!-- Counter - Alerts -->
+                    <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="alertsDropdown">
+                    <h6 class="dropdown-header">
+                        Alerts Center
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-info-circle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">April 25, 2023</div>
+                            <span class="font-weight-bold">Arelis Muñoz has approved an access on your request number R520</span>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="/requestTracking.html">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">April 18, 2023</div>
+                            The request number R516 has been approved!
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-info-circle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">April 18, 2023</div>
+                            Arelis Muñoz has approved an access on your request number R516
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user fa-sm fa-fw mr-2" style="font-size: 20px"></i>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600">Douglas McGee</span>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Logout
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- End of Topbar -->
+    <!-- Begin Page Content -->
+    <form action="/requestTracking.html" method="get">
+        <!-- cambiar 'get' por 'post' -->
+        <div class="container-fluid">
+
+            <!-- Section Heading -->
+            <h2 class="h4 mb-4 text-gray-800">User information</h2>
+
+            <!-- Content Row -->
+            <div class="row">
+
+                <!-- Employee name input -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow">
+                        <input type="text" class="form-control bg-transparent border-0" style="height: 50px;" placeholder="Employee full name" />
+                    </div>
+                </div>
+
+                <!-- Employee number input -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow">
+                        <input type="text" class="form-control bg-transparent border-0" style="height: 50px;" placeholder="Employee number" />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Section Heading -->
+            <h2 class="h4 mb-4 text-gray-800">
+                Accesses <a href="Guide.html" title="Click on this icon to see a full access guide.">
+                    <i class="fas fa-info-circle" style="font-size: 15px;"></i>
+                </a>
+            </h2>
+
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow">
+                        <!-- Positions -->
+                        <select class="form-control bg-transparent border-0" style="height: 50px">
+                            <option selected disabled>Select the position you need the accesses to</option>
+                            <option value="1">Dry PST1</option>
+                            <option value="2">Dry PST2</option>
+                            <option value="3">Dry PST3</option>
+                        </select>
+                    </div>
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+                    <hr>
+
+                    <!-- Accesses -->
+                    <div class="form-inline">
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>Dry Lot Creation</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>EBR Dry Direct Labor</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>EBR Dry Mechanic</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>EBR Dry Tech Operator</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>EBR Operator for Reporrts</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>EBR Reports</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+
+                        <!-- Access group -->
+                        <div class="input-group mt-2">
+                            <label>ELECTRONIC BATCH RECORD</label>
+                            <input type="checkbox" name="access1" value="" class="bg-light border-0 ml-2 mr-4" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.row -->
+            </div>
+
+            <!-- Section Heading -->
+            <h2 class="h4 mb-4 text-gray-800" title="Other accesses in case you need them.">
+                Other accesses
+            </h2>
+
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <!-- Access group -->
+                    <div class="input-group form-inline">
+                        <label>Email</label>
+                        <input type="checkbox" name="otherAccess1" value="" class="bg-light border-0 ml-2 mr-4" />
+                    </div>
+
+                    <!-- Access group -->
+                    <div class="input-group form-inline">
+                        <label>Internet</label>
+                        <input type="checkbox" name="otherAccess2" value="" class="bg-light border-0 ml-2 mr-4" />
+                    </div>
+
+                    <!-- Access group -->
+                    <div class="input-group form-inline mt-2">
+                        <label>Others</label>
+                        <div class="card shadow ml-3">
+                            <input type="text" class="form-control bg-transparent border-0" style="height: 40px;" placeholder="Other access needed"
+                                   title="Write other access the employee will need and you don't see above.'" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.row -->
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+
+                    <hr>
+
+                    <!-- Button -->
+                    <button type="submit" class="btn btn-success btn-icon-split" title="Click this button to submit this request.">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                        <span class="text">Submit request</span>
+                    </button>
+                </div>
+
+                <!-- /.row -->
+            </div>
+
+            <!-- /.container-fluid -->
+        </div>
+
+        <!-- End of Main Content -->
+    </form>
+</div>
+
+
